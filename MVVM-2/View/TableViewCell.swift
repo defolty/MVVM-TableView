@@ -12,12 +12,12 @@ class TableViewCell: UITableViewCell {
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
+    weak var viewModel: TableViewCellViewModelType? {
+        willSet(viewModel) {
+            guard let viewModel = viewModel else { return }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    } 
+            fullNameLabel.text = viewModel.fullname
+            ageLabel.text = viewModel.age
+        }
+    }
 }

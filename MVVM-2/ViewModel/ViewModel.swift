@@ -7,15 +7,20 @@
 
 import Foundation
 
-class ViewModel: TableViewModelType {
-     
+class ViewModel: TableViewViewModelType {
+    
     var profiles = [
         Profile(name: "John", secondName: "Smith", age: 33),
         Profile(name: "Mr", secondName: "Andersen", age: 35)
     ]
     
-    var numberOfRows: Int {
+    func numberOfRows() -> Int {
         return profiles.count
     }
     
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? {
+        let profile = profiles[indexPath.row]
+        
+        return TableViewCellViewModel(profile: profile) // модель для заполнения ячейки, а не всей таблицы
+    }
 }

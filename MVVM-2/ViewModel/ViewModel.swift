@@ -9,6 +9,8 @@ import Foundation
 
 class ViewModel: TableViewViewModelType {
     
+    private var selectedIndexPath: IndexPath?
+    
     var profiles = [
         Profile(name: "John", secondName: "Smith", age: 33),
         Profile(name: "Mr", secondName: "Andersen", age: 35)
@@ -20,7 +22,19 @@ class ViewModel: TableViewViewModelType {
     
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? {
         let profile = profiles[indexPath.row]
-        
-        return TableViewCellViewModel(profile: profile) // модель для заполнения ячейки, а не всей таблицы
+        // модель для заполнения ячейки, а не всей таблицы
+        return TableViewCellViewModel(profile: profile)
+    }
+    
+    func viewModelForSelectedRow() -> DetailViewModelType? {
+        guard let selectedIndexPath = selectedIndexPath else {
+            return nil
+        } 
+        // DetailViewModel имеет инициализатор в виде Profile
+        return DetailViewModel(profile: profiles[selectedIndexPath.row])
+    }
+    
+    func selectedRow(atIndexPath indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath
     }
 }

@@ -9,4 +9,5 @@ import Foundation
 
 struct Con {
     static let cellID = "Cell"
+    static let detailSegueID = "detailSegue"
 }

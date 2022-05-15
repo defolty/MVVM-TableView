@@ -18,5 +18,9 @@ protocol TableViewViewModelType {
     // мы должны предоставить информацию для ячейки
     // этот метод генерирует viewModel для indexPath(для конкретного адреса)
     // и имеет тип следующего протокола, со следующими требованиями TableViewCellViewModelType
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? 
+    func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType?
+    
+    
+    func viewModelForSelectedRow() -> DetailViewModelType?
+    func selectedRow(atIndexPath indexPath: IndexPath)
 }

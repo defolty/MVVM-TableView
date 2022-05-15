@@ -39,4 +39,25 @@ class TableViewController: UITableViewController {
          
         return tableViewCell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        viewModel.selectedRow(atIndexPath: indexPath)
+        
+        performSegue(withIdentifier: Con.detailSegueID, sender: nil)
+    }
+    
+    
+    // MARK: - Storyboard Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let viewModel = viewModel else { return }
+        
+        if identifier == Con.detailSegueID {
+            if let dvc = segue.destination as? DetailViewController {
+                // генерация новой viewModel для DetailViewController
+                dvc.viewModel = viewModel.viewModelForSelectedRow()
+            }
+        }
+    }
 }

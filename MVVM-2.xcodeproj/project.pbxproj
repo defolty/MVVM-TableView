@@ -12,6 +12,9 @@
 		FB41429828316DE200933148 /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41429728316DE200933148 /* TableViewCellViewModelType.swift */; };
 		FB41429A28316F5900933148 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41429928316F5900933148 /* TableViewCellViewModel.swift */; };
 		FB41429C283171F400933148 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41429B283171F400933148 /* Constants.swift */; };
+		FB4142A028317A6C00933148 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB41429F28317A6C00933148 /* DetailViewController.swift */; };
+		FB4142A228317AC600933148 /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4142A128317AC600933148 /* DetailViewModelType.swift */; };
+		FB4142A428317AEE00933148 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4142A328317AEE00933148 /* DetailViewModel.swift */; };
 		FBAF6BCB2831069400C0BF79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAF6BCA2831069400C0BF79 /* AppDelegate.swift */; };
 		FBAF6BCD2831069400C0BF79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAF6BCC2831069400C0BF79 /* SceneDelegate.swift */; };
 		FBAF6BD22831069400C0BF79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAF6BD02831069400C0BF79 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 		FB41429728316DE200933148 /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
 		FB41429928316F5900933148 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		FB41429B283171F400933148 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FB41429F28317A6C00933148 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FB4142A128317AC600933148 /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
+		FB4142A328317AEE00933148 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		FBAF6BC72831069400C0BF79 /* MVVM-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAF6BCA2831069400C0BF79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAF6BCC2831069400C0BF79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,7 @@
 			children = (
 				FB4142932831280E00933148 /* TableViewViewModelType.swift */,
 				FB41429728316DE200933148 /* TableViewCellViewModelType.swift */,
+				FB4142A128317AC600933148 /* DetailViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -65,6 +72,7 @@
 			children = (
 				FB4142912831279600933148 /* ViewModel.swift */,
 				FB41429928316F5900933148 /* TableViewCellViewModel.swift */,
+				FB4142A328317AEE00933148 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 			children = (
 				FBAF6BDE2831075E00C0BF79 /* TableViewController.swift */,
 				FBAF6BE228310C1800C0BF79 /* TableViewCell.swift */,
+				FB41429F28317A6C00933148 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4142A028317A6C00933148 /* DetailViewController.swift in Sources */,
 				FB41429828316DE200933148 /* TableViewCellViewModelType.swift in Sources */,
 				FBAF6BE328310C1800C0BF79 /* TableViewCell.swift in Sources */,
 				FBAF6BCB2831069400C0BF79 /* AppDelegate.swift in Sources */,
@@ -215,6 +225,8 @@
 				FB41429C283171F400933148 /* Constants.swift in Sources */,
 				FB4142942831280E00933148 /* TableViewViewModelType.swift in Sources */,
 				FB41429A28316F5900933148 /* TableViewCellViewModel.swift in Sources */,
+				FB4142A428317AEE00933148 /* DetailViewModel.swift in Sources */,
+				FB4142A228317AC600933148 /* DetailViewModelType.swift in Sources */,
 				FB4142922831279600933148 /* ViewModel.swift in Sources */,
 				FBAF6BCD2831069400C0BF79 /* SceneDelegate.swift in Sources */,
 			);
